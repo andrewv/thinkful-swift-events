@@ -15,8 +15,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var subtitleTextField: UITextField!
     
     @IBAction func addEvent(sender: AnyObject) {
-        let dataVC = self.childViewControllers.last as OutputViewController
-        dataVC.addNewEvent((titleTextField.text), subtitle: (subtitleTextField.text))
+        println(self.childViewControllers.count)
+        let navVC = self.childViewControllers.last as UINavigationController
+        let tableVC = navVC.childViewControllers.last as EventTableViewController
+            tableVC.addNewEvent((titleTextField.text), aSubtitle: (subtitleTextField.text))
         resetUI()
         
     }
@@ -39,31 +41,4 @@ class MainViewController: UIViewController {
     }
 
 
-}
-
-
-class OutputViewController:UIViewController {
-    
-    @IBOutlet weak var outputTextView: UITextView!
-    
-    func addNewEvent(title:String, subtitle:String) {
-        var newTitle = title
-        var newSubtitle = subtitle
-        outputTextView.text = outputTextView.text.stringByAppendingFormat("\n%@", newTitle)
-        outputTextView.text = outputTextView.text.stringByAppendingFormat("\n%@", newSubtitle)
-        outputTextView.text = outputTextView.text.stringByAppendingFormat("\n%@", "")
-
-
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }

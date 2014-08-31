@@ -12,6 +12,7 @@
 		2A46A1E619B339DF00F21C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A46A1E419B339DF00F21C92 /* Main.storyboard */; };
 		2A46A1E819B339DF00F21C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A46A1E719B339DF00F21C92 /* Images.xcassets */; };
 		2A46A1F419B339DF00F21C92 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A46A1F319B339DF00F21C92 /* EventsTests.swift */; };
+		2ACA107819B340DE008EF8CA /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA107719B340DE008EF8CA /* EventTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		2A46A1ED19B339DF00F21C92 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A46A1F219B339DF00F21C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A46A1F319B339DF00F21C92 /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		2ACA107719B340DE008EF8CA /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				2A46A1E019B339DF00F21C92 /* AppDelegate.swift */,
 				2A46A1E219B339DF00F21C92 /* ViewController.swift */,
+				2ACA107719B340DE008EF8CA /* EventTableViewController.swift */,
 				2A46A1E419B339DF00F21C92 /* Main.storyboard */,
 				2A46A1E719B339DF00F21C92 /* Images.xcassets */,
 				2A46A1DE19B339DF00F21C92 /* Supporting Files */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A46A1E319B339DF00F21C92 /* ViewController.swift in Sources */,
+				2ACA107819B340DE008EF8CA /* EventTableViewController.swift in Sources */,
 				2A46A1E119B339DF00F21C92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +399,7 @@
 				2A46A1F919B339DF00F21C92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A46A1FA19B339DF00F21C92 /* Build configuration list for PBXNativeTarget "EventsTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +408,7 @@
 				2A46A1FC19B339DF00F21C92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
