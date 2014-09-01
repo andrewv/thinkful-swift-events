@@ -12,6 +12,9 @@
 		2A46A1E619B339DF00F21C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A46A1E419B339DF00F21C92 /* Main.storyboard */; };
 		2A46A1E819B339DF00F21C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A46A1E719B339DF00F21C92 /* Images.xcassets */; };
 		2A46A1F419B339DF00F21C92 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A46A1F319B339DF00F21C92 /* EventsTests.swift */; };
+		2A79432519B3D18E004DDF1E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A79431019B3D11B004DDF1E /* Realm.framework */; };
+		2A79432819B3D19B004DDF1E /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2A79431419B3D11B004DDF1E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A79433219B3E06F004DDF1E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A79433119B3E06F004DDF1E /* Event.swift */; };
 		2ACA107819B340DE008EF8CA /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA107719B340DE008EF8CA /* EventTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +26,83 @@
 			remoteGlobalIDString = 2A46A1DA19B339DF00F21C92;
 			remoteInfo = Events;
 		};
+		2A79430F19B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8D89B981955FC6D00CF2B9A;
+			remoteInfo = OSX;
+		};
+		2A79431119B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8D89BA31955FC6D00CF2B9A;
+			remoteInfo = "OSX Tests";
+		};
+		2A79431319B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E856D1D5195614A300FB2FCF;
+			remoteInfo = iOS;
+		};
+		2A79431519B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E856D1DF195614A400FB2FCF;
+			remoteInfo = "iOS Tests";
+		};
+		2A79431719B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F8DCA5719930F550008BD7F;
+			remoteInfo = "iOS Device Tests";
+		};
+		2A79431919B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8FE4140196DBA6700073FBB;
+			remoteInfo = OSXTestFramework;
+		};
+		2A79431B19B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8CA10F9196DC18A0044F8AA;
+			remoteInfo = iOSTestFramework;
+		};
+		2A79431D19B3D11B004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F1A5E721992EB7400F45F4C;
+			remoteInfo = TestHost;
+		};
+		2A79432319B3D184004DDF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E856D1D4195614A300FB2FCF;
+			remoteInfo = iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A79432619B3D190004DDF1E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A79432819B3D19B004DDF1E /* Realm.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A46A1DB19B339DF00F21C92 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +114,8 @@
 		2A46A1ED19B339DF00F21C92 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A46A1F219B339DF00F21C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A46A1F319B339DF00F21C92 /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Realm-Xcode6.xcodeproj"; path = "../../../iOS/Frameworks/realm-cocoa/Realm-Xcode6.xcodeproj"; sourceTree = "<group>"; };
+		2A79433119B3E06F004DDF1E /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../Event.swift; sourceTree = "<group>"; };
 		2ACA107719B340DE008EF8CA /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A79432519B3D18E004DDF1E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +141,7 @@
 		2A46A1D219B339DF00F21C92 = {
 			isa = PBXGroup;
 			children = (
+				2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */,
 				2A46A1DD19B339DF00F21C92 /* Events */,
 				2A46A1F019B339DF00F21C92 /* EventsTests */,
 				2A46A1DC19B339DF00F21C92 /* Products */,
@@ -77,9 +160,9 @@
 		2A46A1DD19B339DF00F21C92 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				2A46A1E019B339DF00F21C92 /* AppDelegate.swift */,
-				2A46A1E219B339DF00F21C92 /* ViewController.swift */,
-				2ACA107719B340DE008EF8CA /* EventTableViewController.swift */,
+				2A79433319B3E089004DDF1E /* Model */,
+				2A79433519B3E132004DDF1E /* Delegate */,
+				2A79433419B3E12B004DDF1E /* Controllers */,
 				2A46A1E419B339DF00F21C92 /* Main.storyboard */,
 				2A46A1E719B339DF00F21C92 /* Images.xcassets */,
 				2A46A1DE19B339DF00F21C92 /* Supporting Files */,
@@ -112,6 +195,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2A79430519B3D11A004DDF1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A79431019B3D11B004DDF1E /* Realm.framework */,
+				2A79431219B3D11B004DDF1E /* OSX Tests.xctest */,
+				2A79431419B3D11B004DDF1E /* Realm.framework */,
+				2A79431619B3D11B004DDF1E /* iOS Tests.xctest */,
+				2A79431819B3D11B004DDF1E /* iOS Device Tests.xctest */,
+				2A79431A19B3D11B004DDF1E /* TestFramework.framework */,
+				2A79431C19B3D11B004DDF1E /* TestFramework.framework */,
+				2A79431E19B3D11B004DDF1E /* TestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A79433319B3E089004DDF1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A79433119B3E06F004DDF1E /* Event.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2A79433419B3E12B004DDF1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A46A1E219B339DF00F21C92 /* ViewController.swift */,
+				2ACA107719B340DE008EF8CA /* EventTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2A79433519B3E132004DDF1E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2A46A1E019B339DF00F21C92 /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +245,12 @@
 				2A46A1D719B339DF00F21C92 /* Sources */,
 				2A46A1D819B339DF00F21C92 /* Frameworks */,
 				2A46A1D919B339DF00F21C92 /* Resources */,
+				2A79432619B3D190004DDF1E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2A79432419B3D184004DDF1E /* PBXTargetDependency */,
 			);
 			name = Events;
 			productName = Events;
@@ -179,6 +304,12 @@
 			mainGroup = 2A46A1D219B339DF00F21C92;
 			productRefGroup = 2A46A1DC19B339DF00F21C92 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2A79430519B3D11A004DDF1E /* Products */;
+					ProjectRef = 2A79430419B3D11A004DDF1E /* Realm-Xcode6.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2A46A1DA19B339DF00F21C92 /* Events */,
@@ -186,6 +317,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2A79431019B3D11B004DDF1E /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = 2A79430F19B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431219B3D11B004DDF1E /* OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OSX Tests.xctest";
+			remoteRef = 2A79431119B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431419B3D11B004DDF1E /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = 2A79431319B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431619B3D11B004DDF1E /* iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS Tests.xctest";
+			remoteRef = 2A79431519B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431819B3D11B004DDF1E /* iOS Device Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS Device Tests.xctest";
+			remoteRef = 2A79431719B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431A19B3D11B004DDF1E /* TestFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFramework.framework;
+			remoteRef = 2A79431919B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431C19B3D11B004DDF1E /* TestFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFramework.framework;
+			remoteRef = 2A79431B19B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A79431E19B3D11B004DDF1E /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 2A79431D19B3D11B004DDF1E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2A46A1D919B339DF00F21C92 /* Resources */ = {
@@ -211,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A79433219B3E06F004DDF1E /* Event.swift in Sources */,
 				2A46A1E319B339DF00F21C92 /* ViewController.swift in Sources */,
 				2ACA107819B340DE008EF8CA /* EventTableViewController.swift in Sources */,
 				2A46A1E119B339DF00F21C92 /* AppDelegate.swift in Sources */,
@@ -232,6 +423,11 @@
 			isa = PBXTargetDependency;
 			target = 2A46A1DA19B339DF00F21C92 /* Events */;
 			targetProxy = 2A46A1EE19B339DF00F21C92 /* PBXContainerItemProxy */;
+		};
+		2A79432419B3D184004DDF1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOS;
+			targetProxy = 2A79432319B3D184004DDF1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -329,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

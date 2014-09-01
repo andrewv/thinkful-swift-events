@@ -7,26 +7,41 @@
 //
 
 import UIKit
+import Realm
 
-struct EventInfo {
-    var title:String
-    var subtitle:String
-}
-
-var listOfEvents: [EventInfo] = []
 
 class EventTableViewController: UITableViewController {
     
+    var array = RLMArray(objectClassName: Event.className())
+
+  
     
     func addNewEvent(aTitle:String, aSubtitle:String) {
-        println("yes")
-        var newEvent = EventInfo(title:aTitle, subtitle:aSubtitle)
-        println("the new event is \(newEvent.title)")
-        listOfEvents.append(newEvent)
-        tableView.reloadData()
+        let newEvent:Event = Event()
+        array = Event.allObjects().arraySortedByProperty("position", ascending: true)
+        newEvent.eventTitle = aTitle
+        newEvent.eventSubtitle = aSubtitle
+        newEvent.position = (Int(array.count))+1
+        
+        //default realm
+        let realm = RLMRealm.defaultRealm()
+
+        
+        //write to realm
+        realm.beginWriteTransaction()
+        realm.addObject(newEvent)
+        realm.commitWriteTransaction()
+        println("the array has \(array.count) objects")
+
+        reloadData()
+        
     }
     
-    
+    func reloadData() {
+        array = Event.allObjects().arraySortedByProperty("position", ascending: true)
+        println("tableview was reloaded")
+        tableView.reloadData()
+    }
     
 
     override func viewDidLoad() {
@@ -54,15 +69,18 @@ class EventTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return listOfEvents.count
+        return Int(array.count)
     }
+    
+    
+   
 
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = listOfEvents[indexPath.row].title
-        cell.detailTextLabel.text = listOfEvents[indexPath.row].subtitle
-
+    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+        let cell = tableView!.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let object = array[UInt(indexPath!.row)] as Event
+        cell.textLabel.text = object.eventTitle
+        cell.detailTextLabel.text = object.eventSubtitle
         return cell
     }
     
@@ -79,7 +97,10 @@ class EventTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if editingStyle == .Delete {
-            listOfEvents.removeAtIndex(indexPath.row)
+            let realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.deleteObject(array[UInt(indexPath.row)] as RLMObject)
+            realm.commitWriteTransaction()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -88,10 +109,11 @@ class EventTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView!, moveRowAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-        let fromEvent = listOfEvents[fromIndexPath.row]
-        listOfEvents.removeAtIndex(fromIndexPath.row)
-        listOfEvents.insert(fromEvent, atIndex: toIndexPath.row)
-
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        var object = array.objectAtIndex(UInt(fromIndexPath.row)) as Event
+        object.position = Int(toIndexPath.row)
+        realm.commitWriteTransaction()
     }
     
 
