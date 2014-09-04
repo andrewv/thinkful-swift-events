@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9FB1FDDBA011002795A1FF5BD3CABFA2F79E6A59</key>
-		<string>../../../../../iOS/Frameworks/realm-cocoa</string>
+		<string>../../../iOS/Frameworks/realm-cocoa</string>
 		<key>A016F8A5EF3C257AF7B8620738035EB278653EE5</key>
 		<string>../..</string>
 	</dict>

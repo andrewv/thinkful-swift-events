@@ -1,0 +1,3 @@
+[submodule "Third-Party/realm-cocoa"]
+	path = Third-Party/realm-cocoa
+	url = https://github.com/realm/realm-cocoa.git
