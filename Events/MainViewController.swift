@@ -8,17 +8,21 @@
 
 import UIKit
 
+let ADD_NEW_EVENT_REQUESTED = "ADD_NEW_EVENT_REQUESTED"
+
 class MainViewController: UIViewController {
                             
     @IBOutlet weak var titleTextField: UITextField!
-    
     @IBOutlet weak var subtitleTextField: UITextField!
     
     @IBAction func addEvent(sender: AnyObject) {
-        println(self.childViewControllers.count)
-        let navVC = self.childViewControllers.last as UINavigationController
-        let tableVC = navVC.childViewControllers.last as EventTableViewController
-            tableVC.addNewEvent((titleTextField.text), aSubtitle: (subtitleTextField.text))
+//        println(self.childViewControllers.count)
+//        let navVC = self.childViewControllers.last as UINavigationController
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(ADD_NEW_EVENT_REQUESTED, object: nil, userInfo:["title":titleTextField.text, "subtitle":subtitleTextField.text])
+        
+//        let tableVC = navVC.childViewControllers.last as EventTableViewController
+//            tableVC.addNewEvent((titleTextField.text), aSubtitle: (subtitleTextField.text))
         resetUI()
         
     }

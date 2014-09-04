@@ -49,11 +49,19 @@ class EventTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         reloadData()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("handleAddEventRequest:"), name: ADD_NEW_EVENT_REQUESTED, object: nil)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func handleAddEventRequest(note:NSNotification) {
+        println("userInfo: \(note.userInfo)")
+        let data = note.userInfo! as Dictionary<String, String>
+        self.addNewEvent(data["title"]!, aSubtitle: data["subtitle"]!)
     }
 
     override func didReceiveMemoryWarning() {
